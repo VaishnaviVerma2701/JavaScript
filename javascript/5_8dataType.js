@@ -1,9 +1,7 @@
 // day5 datatype and ecma
 
 "use strict"; // treat all js code as newer version 
-
-// alert(3+3) // show the error because we are using nodejs ,not browser
-
+// alert(3+3)  show the error because we are using nodejs ,not browser
 console.log(3
     +
     3); // code readability should be high
@@ -23,21 +21,20 @@ console.log(3
  // symbol =>  for uniqueness
 
  //object
-
  console.log(typeof undefined);// undefined
  console.log(typeof null); //object 
+
 
 
  // day6_datatype conversion
 
  let num = "66"
+console.log(typeof num);
+console.log(typeof(num));
 
-// console.log(typeof num);
-// console.log(typeof(num));
-
-// let valueInNumber = Number(num)
-// console.log(typeof valueInNumber);
-// console.log(valueInNumber);
+let valueInNumber = Number(num)
+console.log(typeof valueInNumber);
+console.log(valueInNumber);
 
  /* "66"=>66
   "66ab" => nan
@@ -63,28 +60,30 @@ console.log(StringNum)
 console.log( typeof StringNum)
 
 
+
+// day 7 number conversion
+
 let value = 3
 let negValue = -value
 console.log(negValue);
 
 //  operation
+console.log(2+2);
+console.log(2-2);
+console.log(2/2);
+console.log(2*2);
+console.log(2**2);
+console.log(2%3);
 
-// console.log(2+2);
-// console.log(2-2);
-// console.log(2/2);
-// console.log(2*2);
-// console.log(2**2);
-// console.log(2%3);
+let str1 = "hello"
+let  str2 = "vaishu"
+let str3 = str1+str2
+console.log(str3)
 
-// let str1 = "hello"
-// let  str2 = "vaishu"
-// let str3 = str1+str2
-// console.log(str3)
-
-// console.log("1" + 2); // 12
-// console.log(2 + "1"); // 21
-// console.log("1" + 2 + 2); // 122
-// console.log(1 + 2 + "2"); // 32
+console.log("1" + 2); // 12
+console.log(2 + "1"); // 21
+console.log("1" + 2 + 2); // 122
+console.log(1 + 2 + "2"); // 32
  
 // if string is first than string operation perform first than Number
 // if number is first than number operation perform first than string
@@ -100,3 +99,34 @@ console.log(+""); //0
 let counter = 100
 counter++;
 console.log(counter);
+
+
+//day8 comparison
+
+//basic comparison
+console.log(2>1);
+console.log(2>=1);
+console.log(2<1);
+console.log(2<=1);
+console.log(2==1);
+console.log(2!=1);
+
+// comparison if datatype is  different
+console.log("2" >1); // true
+console.log("02" >= 1); // true
+ // this type of comparison first conver string to number and than compare
+
+
+//this type of comparison  always show the confusion
+ console.log(null > 0);//false
+ console.log(null == 0);//false
+ console.log(null >= 0); //true
+
+ console.log(undefined > 0);//false
+ console.log(undefined == 0);//false
+ console.log(undefined >= 0); //false
+
+ //strincy check(===)
+ //it is stricly check the datatype of varisble
+ console.log("2" === 2); // false
+

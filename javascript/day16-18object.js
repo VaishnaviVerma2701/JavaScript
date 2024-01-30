@@ -92,3 +92,37 @@ const obj3 = {...obj1, ...obj2,...obj4}
  console.log((tinderUser.hasOwnProperty('id')));
 
 
+ //   day18 OBJECT DE-STRUCTURE and JSON API
+       
+ const  course ={
+     coursename: "js in hindi",
+     price:"999",
+      courseInstructor:"vaishnavi"
+ }
+ //course.courseInstructor
+ const{courseInstructor} =course
+ const{courseInstructor:instructor} =course // object de-structure 
+ //courseInstructor assinge another object(instructor)
+ console.log(courseInstructor);
+ console.log(instructor);
+
+//  const navbar = ({company})=>{
+//  }
+//  navbar(company = "vaishu")
+
+
+// json api syntax{}
+
+// {
+// name : "monu",
+// coursename : "js in hindi"
+// }
+
+// array form 
+[
+    {},
+    {},
+    {}
+]
+
+ 

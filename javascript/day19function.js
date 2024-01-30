@@ -7,24 +7,24 @@ function myfunction () {
     console.log("l");
     console.log("o");
 }
-//myfunction() // write to execute the function
+myfunction() // write to execute the function
 
-// function addTwonum(number1 ,number2) {  //function parameter
-//    console.log((number1+number2)); 
-// }
-//addTwonum(6,"a") //  this is function argument
+function addTwonum(number1 ,number2) {  //function parameter
+   console.log((number1+number2)); 
+}
+addTwonum(6,"a") //  this is function argument
 
-//const result = addTwonum(7,8) // return 15
- //console.log("result :" ,result); //  return undefined
+const result = addTwonum(7,8) // return 15
+ console.log("result :" ,result); //  return undefined
 
 
-//  function addTwoNum(number1,number2){
-//     let result = number1 + number2
-//     return result
-//     //return number1+ number2
-//  }
- //const result = addTwoNum(3,6) // does not print any value because we initilize return kayword
- //console.log("result :" , result) // return 9
+ function addTwoNum(number1,number2){
+    let result = number1 + number2
+    return result
+    //return number1+ number2
+ }
+ const result1 = addTwoNum(3,6) // does not print any value because we initilize return kayword
+ console.log("result :" , result1) // return 9
 
 
  function userlogin(username ="sam"){

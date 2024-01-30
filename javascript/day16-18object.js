@@ -104,6 +104,7 @@ const obj3 = {...obj1, ...obj2,...obj4}
  const{courseInstructor} =course
  const{courseInstructor:instructor} =course // object de-structure 
  //courseInstructor assinge another object(instructor)
+ 
  console.log(courseInstructor);
  console.log(instructor);
 

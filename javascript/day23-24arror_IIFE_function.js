@@ -1,3 +1,6 @@
+ 
+      // Day 23  This and Arror functin
+
 const user ={
     username : "rekha",
     price: 786,

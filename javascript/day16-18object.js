@@ -70,7 +70,8 @@ const obj4 = {3:"a", 6:"d"}
 const obj3 = {...obj1, ...obj2,...obj4}
  //console.log(obj3);
 
- const Users = [
+ // array form
+ const Users = [ 
 {
  id: 1,
  name:"pihu"

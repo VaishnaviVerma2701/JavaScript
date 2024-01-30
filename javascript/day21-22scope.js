@@ -1,4 +1,4 @@
- //   day 20 global and local scope
+ //   day 21 global and local scope
 
 //  let a = 10
 //  const b = 20

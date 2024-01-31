@@ -37,7 +37,7 @@
  //console.log(map);
 
  for (const [key, value] of map) {
-  //console.log(key, ': ->',value);
+  console.log(key, ': ->',value);
  }
 
  //  for- of loop => does not used for object
@@ -57,13 +57,13 @@
   rp: "rubi"
  }
  for (const key in myObject) {
-  //console.log(`${key} shortcut for ${myObject[key]}`);
+  console.log(`${key} shortcut for ${myObject[key]}`);
  }
 
  // for-in loop => used by array
  const programming =["js" ,"cpp","css","java","c","py"]
  for (const key in programming) {
-  //console.log(programming[key]);
+    console.log(programming[key]);
  }
 
 
@@ -75,14 +75,14 @@
   map.set('in', "india")
 
   for (const [key ,value] in map1) {
-     // console.log(key, ': ->',value); 
+     console.log(key, ': ->',value); 
   }
 
    // for- each loop
 
    const cooding = ["js","java","cpp","css","py","html"]
    cooding.forEach(function (val){
-    //console.log(val);
+    console.log(val);
    })
 
   //  cooding.forEach((item)=>{
@@ -90,7 +90,7 @@
   //  })
 
   function printMe(item){
-    //console.log(item);
+    console.log(item);
   }
   cooding.forEach(printMe)
 

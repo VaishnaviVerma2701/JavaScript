@@ -7,9 +7,11 @@
  function addnum(num1,num2){
     let total = num1 + num2
     return total
+    console.log("heloo");
  }
  let result1 = addnum(val1 , val2)
  let result2 = addnum(6, 8)
+
 
  /* step =>
  1. global execution

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> create new element in dom</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div class="parent">
+        <!-- this is comment line -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+</body>
+<script>
+   const parent = document.querySelector('.parent') // this is ckeck the parent  class  item result show in inspect of brower than console
+   console.log(parent);
+   console.log(parent.children); // div of monday tuesday...
+   console.log(parent.children[0].innerHTML); // monday tuesday wednesday thursday
+
+//    for (let i = 0; i < parent.children.length; i++) {
+//     console.log(parent.children[i].innerHTML);
+//    }
+   parent.children[1].style.color = 'orange'  // change the color of children 1(tuesday)
+   console.log(parent.firstElementChild);
+   console.log(parent.lastElementChild);
+
+    const dayone=document.querySelector('.day') // go to child to parent
+    console.log(dayone); //  print monday
+    console.log(dayone.parentElement); //print the parent
+    console.log(dayone.nextElementSibling); //tuesday 
+
+    console.log("NODES :" ,parent.childNodes); // print 9 item  1.parent 2.enter to next line 3.monday 4.enter to next line
+    //we use enter to go next line so this is also node list , it is count to how many time enter
+
+    //if we add new line in parent class than it prinr 11 because 1 line and 1 enter
+
+
+      // ---------- create new element ----------
+      console.log(" ------ create new element -----");
+
+      const div =document.createElement('h1')
+      console.log(div);
+      div.className ="main"
+      div.id = Math.round(Math.random()*10 + 1)
+      div.setAttribute("title","generated title")
+      div.style.backgroundColor = "green"
+      div.style.padding ="12px"
+      //div.innerText =" hello vaishnavi"
+      const addtext = document.createTextNode("hello vaishnavi")
+      div.appendChild(addtext)
+
+      document.body.appendChild(div) // this is add to body of  html page
+</script>
+</html>  

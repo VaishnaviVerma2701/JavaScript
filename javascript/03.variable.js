@@ -1,4 +1,4 @@
-  // day 04 : variable
+  //   ---------  day 4/ video 4 : variable -----
   
  const accId = 1234
 let accEmail= "vaishnaviverma2701@gmail.com"

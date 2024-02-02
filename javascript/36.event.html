@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML event</title>
+</head>
+<body style="background-color: rgb(50, 47, 47); color: aliceblue;">
+     <h2>Amazing Image</h2>
+     <div>
+        <ul id="images">
+        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            </ul>
+     </div>
+</body>
+<script>
+
+    // show the activity click on image and result show  in console
+       console.log("-------- HTML EVENT ------");
+    // method 1: onclicked
+// document.getElementById('owl').onclick = function() {
+//     alert("owl clicked")
+// }
+
+// method 2 : write html page inside of li
+// method 3 : attachEvenet
+// method 4; JQuery - on
+
+           // type, timestamp , defaultPrevented
+          // target, toElement, srcElement, currentTarget
+          //clientX ,clientY, screenX, screenY
+          // altkey, ctrlkey, shiftkey, keycode
+         // default => alway false
+
+// method 5: eventListener
+// document.getElementById('owl').addEventListener('click' , function(){
+//     alert("owl clicked again")
+// })
+
+
+// method 6: object
+// document.getElementById('owl').addEventListener('click' , function(e){
+//     console.log(e);
+//      },true)
+
+
+// event propogation = inside to outside(inner image -> li->ul) 
+   console.log("------- event propogation--------");
+
+// document.getElementById('images').addEventListener('click' , function(e){
+//     console.log("clickerd inside the ul");
+//       })
+
+       console.log("method 1:");
+    //   document.getElementById('owl').addEventListener('click' , function(e){
+    // console.log("owl clicked");
+    // e.stopImmediatePropagation() // stop the propogation
+    //   },false)
+
+
+    console.log("method 2:");
+    //  document.getElementById('google').addEventListener
+    //  ('click', function(e){
+    //     console.log("google clicked");
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //  },false)
+
+
+    document.querySelector('#images').addEventListener
+    ('click', function(e){
+        //console.log(e);
+        // console.log(e.target);
+        //  console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+         if(e.target.tagName ==='IMG' ){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+             removeIt.remove()
+         }
+         //let removeIt = e.target.parentNode // print parent
+          //removeIt.remove() // click on images than it is remove the images
+
+        // removeIt.parentNode.removeChild(removeIt)
+    })
+</script>
+</html>

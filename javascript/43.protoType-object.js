@@ -88,15 +88,15 @@ const TeachingSupport = {
 const TASupport = {
     makeAssignment: 'JS assignment',
     fullTime: true,
-    __proto__: TeachingSupport
+    __proto__: TeachingSupport // inherite to teachingsupport
 }
-Teacher.__proto__ = user
+Teacher.__proto__ = user // inherite to user
 
 // modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher)
 
-let anotherUsername = "ChaiAurCode     "
 
+let anotherUsername = "ChaiAurCode     "
 String.prototype.trueLength = function () {
     console.log(`${this}`);
     console.log(`True length is: ${this.trim().length}`);

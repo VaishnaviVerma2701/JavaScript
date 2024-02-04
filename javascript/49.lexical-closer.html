@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Closer </title>
+</head>
+<body style="background-color: #313131;">
+     <button id="orange">Orange</button>
+     <button id="green">Green</button>
+     <button id="blue">blue</button>
+     <button id="red">red</button>
+</body>
+<script>
+    // lexical scoping
+    function outer(){ // it is a parent of inner and innerTwo then both are access to username
+        let username = "vaishnavi"
+        function inner(){
+            let secret ="my123"
+            console.log("inner" , username);
+        }
+        function innerTwo(){
+            console.log("innerTwo" , username);
+            //console.log(secret);// does not access because it  is not globel
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    // console.log("TOO OUTER" ,username); // show error
+
+
+    // closer
+
+    function makeFunc(){
+        const name = "Mozilla";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;
+    }
+    const myFunc = makeFunc();
+    myFunc();
+</script>
+
+<script>
+    // if limmited button then this is sutable
+
+    //  document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = 'orange'
+    //  }
+    //  document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    //  }
+
+    // if many button are ther then this is sutable
+     function clickHandler(color) {
+
+        return function(){ // it access the color because it is insite of clickHandler function
+        document.body.style.backgroundColor = `${color}`
+     }
+    }
+     document.getElementById("orange").onclick = clickHandler("orange")
+     document.getElementById("green").onclick = clickHandler("green")
+     document.getElementById("blue").onclick = clickHandler("blue")
+     document.getElementById("red").onclick = clickHandler("red")
+
+</script>
+</html>

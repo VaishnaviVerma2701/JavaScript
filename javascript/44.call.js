@@ -8,7 +8,7 @@
  }
 
  function createUser(username , email , password){
-    SetUsername.call(this, username) //.call function are used to take the reference of setUsername function
+    SetUsername.call(this, username) //.call function are used to take the reference of setUsername function  and eske pass khud ka this nhi hota diya jata hai
     this.email = email
     this.password = password
  }

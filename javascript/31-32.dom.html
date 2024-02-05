@@ -34,3 +34,69 @@
  <!-- innerText = give only available text not span text include -->
  <!-- innerHtml = give the all heading text include span style all -->
   <!-- this section all work on console -->
+
+
+  <!-- day 32 ( console me) element selection -->
+
+   <!-- 1 document.getElementBtId('title')
+   2 document.getElementBtId('title').id -> print title
+   3 document.getElementBtId('title').class -> undefined
+   4 document.getElementBtId('title').className -> heading
+   4 document.getElementBtClass('heading').className -> heading
+
+   ****Attribute selection****
+
+   ** give the value of attribute **
+   5 document.getElemenrById('title').getAttribute('id') -> title
+   6 document.getElemenrById('title').getAttribute('class') -> heading
+
+   *****set the attribute****
+   7 document.getElemenrById('title').setAttribute('class' ,'test Heading')
+
+   8 const title  = document.getElementBtId('title')
+   9 title -> print value of title
+
+    *** set style ****
+    10 title.style.backgroundColor ='green'
+    
+    11 title.textContent 
+    12 title.innerHTML 
+    13 title.innerText 
+   
+    ** querySelector**
+    14 document.querySelector('h2') -> give all h2
+    15 document.querySelector('#title')
+    16 document.querySelector('.heading')
+    17 document.querySelector('input[type ="password"]')
+    18 document.querySelector('ul')
+    19  const myul = document.querySelector('ul')
+    20 myul.querySelector('li')
+    21 const myli = myul.querySelector('li')
+    22 myli.style.backgroundColor = 'green'
+    23 myli.style.padding = '12px'
+
+    ***** querySelectorAll ***
+     
+    24 const templist = document.querySelectorAll('li')
+    25 templist => it act as a array
+    26 templist.style.backgroundColor ='green' // show error
+    27 templist[0].style.backgroundColor ='green' => set  0 index element is green
+        templist[0].innettext
+
+    28 templist.forEach(function(l){
+        l.style.backgroundColor ='green'
+    })
+
+      29 document.getElementByClassName('list-item')
+      30 const tempclasslist = document.getElementByClassName('list-item')
+      31 tempclasslist.forEach(function(li){ // can,t reach
+        console.log(li)
+      })
+       *** convert the tempclasslist **
+      32  Array.from(tempclasslist)
+      33  const myconvertArray =  Array.from(tempclasslist)
+      34 myconvertArray.forEach(function(li){
+        li.style.color ='blue'
+      })
+
+ -->

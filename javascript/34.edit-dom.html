@@ -14,7 +14,7 @@
      // add element
     console.log("------- add element--------");
 
-    // method 1: innerHTML function
+    // method 1: innerHTML function/method
     function addlanguage(langName){
         const li= document.createElement('li')
         li.innerHTML=`${langName}`
@@ -24,9 +24,12 @@
     addlanguage("java")
 
 
-// method 2: optimize function
+// method 2: optimize method  (if many  element are ppresent in html page than iteration is taking time so this is sutable for that)
     function addOptiLanguage(langName){
         const li = document.createElement('li');
+        //const add =document.createTextNode(langName) 
+        //li.appendChild(add)
+
         li.appendChild(document.createTextNode(langName))
         document.querySelector('.language').appendChild(li)
     }
@@ -37,9 +40,12 @@
 
      // method 3 : replace element
     const secondLang= document.querySelector("li:nth-child(2)")
+    // console.log(secondLang);
+    //secondLang.innerHTML ="mojo"
     const newli = document.createElement('li');
     newli.textContent="Mojo"
     secondLang.replaceWith(newli) // replace the python to mojo
+
 
 // method 4 : replace first element
     const firstLang= document.querySelector("li:first-child")
